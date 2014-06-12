@@ -27,10 +27,11 @@
 
         <div class="col-md-6 col-lg-offset-1 .col-md-offset-2">
             <div class="row">
+
                 <!-- Volume controller-->
                 <div class="rack" style="padding:0px 20px">
                     <div style="float:left;width:200px;padding:30px">
-                        <input class="dial" data-width="180" data-height="180" data-min=0 data-max=100 data-angleOffset="60" data-angleArc="320" value="0">
+                        <input class="dial" id="volController" data-width="180" data-height="180" data-min="0" data-max="100" data-angleOffset="60" data-angleArc="320" value="0">
                     </div>
                 </div>
 
@@ -48,12 +49,30 @@
                         <i class="fa fa-step-forward"></i>
                     </button>
                 </div>
-                <hr> <!-- Clearfix -->
+
+                <div style="clear:both"></div>
             </div><!-- end row-->
         </div>
-    </div>
 
-        <div style="clear:both"></div>
+        <div class="col-md-3 row">
+
+            <!-- light controller-->
+            <div class="rack" style="padding:0px 20px">
+                <div style="float:left;width:200px;padding:30px">
+                    <input class="dial" id="lightController" data-width="180" data-height="180" data-min="0" data-max="100" data-angleOffset="60" data-angleArc="320" value="0">
+                </div>
+            </div>
+
+            <button class="btn btn-default btn-lg" data-action="lights.0" data-role="button"><i class="fa fa-lightbulb-o"></i> 0%</button>
+            <button class="btn btn-default btn-lg" data-action="lights.25" data-role="button"><i class="fa fa-lightbulb-o"></i> 25%</button>
+            <button class="btn btn-default btn-lg" data-action="lights.50" data-role="button"><i class="fa fa-lightbulb-o"></i> 50%</button>
+            <button class="btn btn-default btn-lg" data-action="lights.75" data-role="button"><i class="fa fa-lightbulb-o"></i> 75%</button>
+            <button class="btn btn-default btn-lg" data-action="lights.100" data-role="button" data-theme="e"><i class="fa fa-lightbulb-o"></i> 100%</button>       
+        </div>
+
+
+
+    </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
         <script src="js/jquery.kontrol.js"></script>
