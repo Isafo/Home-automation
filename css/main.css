@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+  background-color: #333132!important;
+  color: #fff!important;
+}
+
+.row{
+	background-color: #454243;
+	margin: 2%;
+}
+
+.buttonGroup{
+	padding: 2%;
+}
+
+/*
+**Clear fix
+*/
+
+hr {
+	display: block; 
+	clear: left; 
+	margin: -0.66em 0;
+  	visibility: hidden;
+}
+
+.:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
