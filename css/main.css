@@ -12,6 +12,11 @@ body {
 
 .buttonGroup{
 	padding: 2%;
+	display: inline-block;
+}
+
+button{
+	margin-top: 4%;
 }
 
 /*
