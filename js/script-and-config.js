@@ -40,4 +40,23 @@ $(document).ready(function() {
             }(element)
         });
     });
+
+    // bind actions to sliders. 
+    // when the slider changes value this function will be triggered
+    $('#doughnut').click({
+        lastUpdate: lastUpdate
+    }, function(event) {
+        var temp = (new Date()).getTime();
+        if (event.data.lastUpdate+200 < temp) {
+            event.data.lastUpdate = temp;
+            value = $(this).val();
+            $.ajax({
+                url: serverUrl+'/ajax.html?'+$(this).attr('id')+'.'+value,
+                dataType: 'JSONP',
+                cache: false
+            });
+        }
+    });
+
+
 });
