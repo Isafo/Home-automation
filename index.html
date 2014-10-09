@@ -16,10 +16,12 @@
     </head>
     <body>
 
+ <!-- <input type="range" id="volSlider" value="0" min="0" max="100"/> -->
+
     <div class="container">
         <div class="col-md-4">
             <div class="buttonGroup cf">
-                <button data-action="mood.mysbelysning" class="btn btn-default btn-lg" style="margin-top:4%; width:200px" type="button" >Mysbelysning</button> <br>
+                <button data-action="mood.mysbelysning"  onclick="alert('Hello world!')" class="btn btn-default btn-lg" style="margin-top:4%; width:200px" type="button" >Mysbelysning</button> <br>
                 <button data-action="mood.productive" class="btn btn-default btn-lg" style="margin-top:4%; width:200px" type="button" >Produktiv</button> <br>
                 <button data-action="mood.sleep" class="btn btn-default btn-lg" style="margin-top:4%; width:200px" type="button" >Sova</button>
             </div>
@@ -128,7 +130,7 @@
                     <br/>
 
                     <button class="btn btn-default btn-lg" data-action="sound.subtitles">Undertexter</button>
-                    <button class="btn btn-default btn-lg" data-action="sound.osd">OSD</button>
+                    <button class="btn btn-default btn-lg" data-action="xbmc.start">Start XBMC</button>
                 </div>
 
         </div>
@@ -137,6 +139,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <script src="js/jquery.kontrol.js"></script>
     <script type="text/javascript" src="js/doughnutControl.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/script-and-config.js"></script>
     </body>
 </html>

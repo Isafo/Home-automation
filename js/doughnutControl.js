@@ -1,3 +1,8 @@
+// send requests to local server
+var serverUrl = '';
+
+var lastUpdate = 0; // this is used to make sure that sliders do not send ajax requests too often
+
 $(function() {
     var $all = $(".dial")
         , $body = $("body");
@@ -12,21 +17,3 @@ $(function() {
         .css({display:'inline',padding:'0px 10px'
     });
 });
-
-
-    // bind actions to volumeControler. 
-    // when the controller changes value this function will be triggered
-    $('input[class="dial"]').change({
-        lastUpdate: lastUpdate
-    }, function(event) {
-        var ts = (new Date()).getTime();
-        if (event.data.lastUpdate+200 < ts) {
-            event.data.lastUpdate = ts;
-            value = $(this).val();
-            $.ajax({
-                url: serverUrl+'/ajax.html?'+$(this).attr('id')+'.'+value,
-                dataType: 'JSONP',
-                cache: false
-            });
-        }
-    });
