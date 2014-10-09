@@ -51,7 +51,7 @@ $(document).ready(function() {
             event.data.lastUpdate = temp;
             value = $(this).val();
             $.ajax({
-                url: serverUrl+'/ajax.html?'+$(this).attr('id')+'.'+value,
+                url: serverUrl+'/ajax.html?'+$(this).attr('data-action')+'.'+value,
                 dataType: 'JSONP',
                 cache: false
             });
