@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
-        <title>Eventghost</title>
+        <title>Home-automation</title>
     </head>
     <body>
 	    <div class="container">
@@ -36,6 +36,7 @@
 	                    </div>
 	                </div>
 
+	                <!-- Music buttons -->
 	                <div class="buttonGroup">
 	                    <button data-action="media.play" data-theme="b" type="button" class="btn btn-default btn-lg">
 	                        <i class="fa fa-play"></i>
@@ -52,17 +53,19 @@
 	                </div>
 
 	                <div style="clear:both"></div>
-	            </div><!-- end row-->
-	        </div>
+	            </div><!-- end row -->
+	        </div><!-- end box -->
 
 	        <div class="col-md-3 row">
 
-	            <!-- light controller-->
+	            <!-- light controller -->
 	            <div class="rack" style="padding:0px 20px">
 	                <div id="doughnut" style="float:left;width:200px;padding:30px" data-action="volslider">
 	                    <input class="dial" id="lightController" data-width="180" data-height="180" data-min="0" data-max="100" data-angleOffset="60" data-angleArc="320" value="0">
 	                </div>
 	            </div>
+
+	            <!-- Light buttons -->
 	            <div class="buttonGroup">
 	                <button class="btn btn-default btn-lg" data-action="lights.0" data-role="button"><i class="fa fa-lightbulb-o"></i> 0%</button>
 	                <button class="btn btn-default btn-lg" data-action="lights.25" data-role="button"><i class="fa fa-lightbulb-o"></i> 25%</button>
@@ -70,7 +73,7 @@
 	                <button class="btn btn-default btn-lg" data-action="lights.75" data-role="button"><i class="fa fa-lightbulb-o"></i> 75%</button>
 	                <button class="btn btn-default btn-lg" data-action="lights.100" data-role="button" data-theme="e"><i class="fa fa-lightbulb-o"></i> 100%</button> 
 	            </div> 
-	        </div>
+	        </div><!-- end row -->
 
 
 	        <div class="row col-md-3 col-lg-offset-1 .col-md-offset-1">
@@ -87,53 +90,52 @@
 	                <button class="btn btn-default btn-lg" data-action="lights.taklampahall.on">på</button>
 	                <button class="btn btn-default btn-lg" data-action="lights.taklampahall.off">av</button>
 	            </div>
-	        </div>
+	        </div><!-- end box -->
 
 	        <div class="row col-md-3 col-lg-offset-1 col-md-offset-1">
-	                <h3>XBMC</h3>
-	                <button class="btn btn-default btn-lg" style="margin-left: 52px; margin-bottom: 0; width: 49px;" data-action="xbmc.arrowup">
-	                    <i class="fa fa-arrow-up"></i>
-	                </button>
-	                <br/>
-	                <button class="btn btn-default btn-lg" style="margin-top: 3px; margin-bottom: 0; width: 49px" data-action="xbmc.arrowleft">
-	                    <i class="fa fa-arrow-left"></i>
-	                </button>
-	                <button class="btn btn-default btn-lg" style="margin-top: 3px; margin-bottom: 0; width: 49px" data-action="xbmc.select">
-	                    <i class="fa fa-level-down"></i>
-	                </button>
-	                <button class="btn btn-default btn-lg" style="margin-top: 3px; margin-bottom: 0; width: 49px" data-action="xbmc.arrowright">
-	                    <i class="fa fa-arrow-right"></i>
-	                </button>
-	                <br/>
-	                <button class="btn btn-default btn-lg" style="margin-top: 3px; margin-left: 52px; width: 49px" data-action="xbmc.arrowdown">
-	                    <i class="fa fa-arrow-down"></i>
-	                </button>
-	                <br/>
-	                <br/>
+                <h3>XBMC</h3>
+                <!-- navigation buttons -->
+                <button class="btn btn-default btn-lg" style="margin-left: 52px; margin-bottom: 0; width: 49px;" data-action="xbmc.arrowup">
+                    <i class="fa fa-arrow-up"></i>
+                </button>
+                <br/>
+                <button class="btn btn-default btn-lg" style="margin-top: 3px; margin-bottom: 0; width: 49px" data-action="xbmc.arrowleft">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <button class="btn btn-default btn-lg" style="margin-top: 3px; margin-bottom: 0; width: 49px" data-action="xbmc.select">
+                    <i class="fa fa-level-down"></i>
+                </button>
+                <button class="btn btn-default btn-lg" style="margin-top: 3px; margin-bottom: 0; width: 49px" data-action="xbmc.arrowright">
+                    <i class="fa fa-arrow-right"></i>
+                </button>
+                <br/>
+                <button class="btn btn-default btn-lg" style="margin-top: 3px; margin-left: 52px; width: 49px" data-action="xbmc.arrowdown">
+                    <i class="fa fa-arrow-down"></i>
+                </button>
+                <br/>
+                <br/>
 
-	                <div class="buttonGroup">
-	                    <button type="button" class="btn btn-default btn-lg" data-action="xbmc.play" data-theme="b">
-	                        <i class="fa fa-play"></i>
-	                    </button>
-	                    <button type="button" class="btn btn-default btn-lg" data-action="xbmc.pause" data-theme="b">
-	                        <i class="fa fa-pause"></i>
-	                    </button>
-	                    <br/>
+                <!-- Controller buttons -->
+                <div class="buttonGroup">
+                    <button type="button" class="btn btn-default btn-lg" data-action="xbmc.play" data-theme="b">
+                        <i class="fa fa-play"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-lg" data-action="xbmc.pause" data-theme="b">
+                        <i class="fa fa-pause"></i>
+                    </button>
+                    <br/>
 
-	                     <button type="button" class="btn btn-default btn-lg" data-action="xbmc.prev" data-theme="b">
-	                        <i class="fa fa-step-backward"></i>
-	                    </button>
-	                     <button type="button" class="btn btn-default btn-lg" data-action="xbmc.next" data-theme="b">
-	                        <i class="fa fa-step-forward"></i>
-	                    </button>
-	                    <br/>
-
-	                    <button class="btn btn-default btn-lg" data-action="sound.subtitles">Undertexter</button>
-	                    <button class="btn btn-default btn-lg" data-action="xbmc.start">Start XBMC</button>
-	                </div>
-
-	        </div>
-
+                     <button type="button" class="btn btn-default btn-lg" data-action="xbmc.prev" data-theme="b">
+                        <i class="fa fa-step-backward"></i>
+                    </button>
+                     <button type="button" class="btn btn-default btn-lg" data-action="xbmc.next" data-theme="b">
+                        <i class="fa fa-step-forward"></i>
+                    </button>
+                    <br/>
+                    <button class="btn btn-default btn-lg" data-action="sound.subtitles">Undertexter</button>
+                    <button class="btn btn-default btn-lg" data-action="xbmc.start">Start XBMC</button>
+                </div>
+	        </div><!-- end box -->
 	    </div> <!-- end container -->
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 	    <script src="js/jquery.kontrol.js"></script>

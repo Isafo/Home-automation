@@ -49,7 +49,10 @@ $(document).ready(function() {
         var temp = (new Date()).getTime();
         if (event.data.lastUpdate+200 < temp) {
             event.data.lastUpdate = temp;
+            console.log(this);
             value = $(this).val();
+            console.log(value);
+
             $.ajax({
                 url: serverUrl+'/ajax.html?'+$(this).attr('data-action')+'.'+value,
                 dataType: 'JSONP',

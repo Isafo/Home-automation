@@ -1,8 +1,3 @@
-// send requests to local server
-var serverUrl = '';
-
-var lastUpdate = 0; // this is used to make sure that sliders do not send ajax requests too often
-
 $(function() {
     var $all = $(".dial")
         , $body = $("body");
