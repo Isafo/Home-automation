@@ -50,7 +50,18 @@ $(document).ready(function() {
         if (event.data.lastUpdate+200 < temp) {
             event.data.lastUpdate = temp;
             console.log(this);
-            value = $(this).val();
+            console.log("this över");
+
+            
+            if(!$(this).is("#volController")){
+                value =  $("#volController").val();               
+            }
+
+            else {
+                value =  $("#lightController").val(); 
+            }
+            
+            //value = $(this).val();
             console.log(value);
 
             $.ajax({
